@@ -1,22 +1,22 @@
-# 📊 E-Commerce Cancellation Analysis Dashboard
+# E-Commerce Cancellation Analysis Dashboard
 
 A data analytics dashboard built using **FastAPI, Pandas, SQLite, and Chart.js** to analyze e-commerce order data and visualize business insights like cancellations, payments, and sales trends.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 📦 Total orders and cancellation tracking
-- 📉 Order status distribution (Pie chart)
-- 💳 Payment method analysis (Bar chart)
-- 📈 Monthly order trends (Line chart)
-- 📊 Top product categories analysis
-- 💡 Business insights dashboard
-- 🎨 Interactive UI using Chart.js
+- Total orders and cancellation tracking
+-  Order status distribution (Pie chart)
+-  Payment method analysis (Bar chart)
+-  Monthly order trends (Line chart)
+-  Top product categories analysis
+-  Business insights dashboard
+-  Interactive UI using Chart.js
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python
 - FastAPI
@@ -27,7 +27,7 @@ A data analytics dashboard built using **FastAPI, Pandas, SQLite, and Chart.js**
 
 ---
 
-## 📁 Dataset
+## Dataset
 
 This project uses the **Olist Brazilian E-Commerce dataset** containing:
 - Orders
@@ -38,7 +38,7 @@ This project uses the **Olist Brazilian E-Commerce dataset** containing:
 
 ---
 
-## 📸 Dashboard Preview
+## Dashboard Preview
 
 ### Main Dashboard
 ![Dashboard 1](screenshots/dashboard1.png)
@@ -48,7 +48,7 @@ This project uses the **Olist Brazilian E-Commerce dataset** containing:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text id="structure"
 ecommerce-dashboard/
