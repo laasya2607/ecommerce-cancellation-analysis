@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Analytics Dashboard</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span>E-Commerce</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#dashboard" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="#orders">
+                <i class="fa-solid fa-box"></i>
+                Orders
+            </a>
+
+            <a href="#payments">
+                <i class="fa-solid fa-credit-card"></i>
+                Payments
+            </a>
+
+            <a href="#revenue">
+                <i class="fa-solid fa-wallet"></i>
+                Revenue
+            </a>
+
+            <a href="#categories">
+                <i class="fa-solid fa-tags"></i>
+                Categories
+            </a>
+
+            <a href="#insights">
+                <i class="fa-solid fa-lightbulb"></i>
+                Insights
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="content">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+
+                    📊 E-Commerce Order Cancellation Analytics
+
+                </h1>
+
+                <p>
+
+                    Analyze order trends, revenue and customer behaviour
+
+                </p>
+
+            </div>
+
+                    
+
+        </header>
+
+
+
+        <!-- KPI Cards -->
+
+        <section
+            id="dashboard"
+            class="cards">
+
+            <div class="card blue">
+
+                <div>
+
+                    <h4>Total Orders</h4>
+
+                    <h2 id="totalOrders">
+
+                        Loading...
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-box"></i>
+
+            </div>
+
+            <div class="card red">
+
+                <div>
+
+                    <h4>Cancelled Orders</h4>
+
+                    <h2 id="cancelledOrders">
+
+                        Loading...
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-ban"></i>
+
+            </div>
+
+            <div class="card green">
+
+                <div>
+
+                    <h4>Cancellation Rate</h4>
+
+                    <h2 id="cancelRate">
+
+                        Loading...
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+            <div class="card purple">
+
+                <div>
+
+                    <h4>Revenue</h4>
+
+                    <h2 id="revenueValue">
+
+                        Loading...
+
+                    </h2>
+
+                </div>
+
+                <i class="fa-solid fa-dollar-sign"></i>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- First Row -->
+
+        <section class="dashboard-grid">
+
+            <div
+                class="panel"
+                id="orders">
+
+                <div class="panel-header">
+
+                    <h2>
+
+                        Order Status Distribution
+
+                    </h2>
+
+                </div>
+
+                <canvas id="statusChart"></canvas>
+
+            </div>
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <h2>
+
+                        Monthly Orders
+
+                    </h2>
+
+                </div>
+
+                <canvas id="monthlyChart"></canvas>
+
+            </div>
+                        <!-- Second Row -->
+
+            <div
+                class="panel"
+                id="payments">
+
+                <div class="panel-header">
+
+                    <h2>
+
+                        Payment Methods
+
+                    </h2>
+
+                </div>
+
+                <canvas id="paymentChart"></canvas>
+
+            </div>
+
+            <div
+                class="panel"
+                id="revenue">
+
+                <div class="panel-header">
+
+                    <h2>
+
+                        Monthly Revenue
+
+                    </h2>
+
+                </div>
+
+                <canvas id="revenueChart"></canvas>
+
+            </div>
+
+            <!-- Third Row -->
+
+            <div
+                class="panel"
+                id="categories">
+
+                <div class="panel-header">
+
+                    <h2>
+
+                        Top Product Categories
+
+                    </h2>
+
+                </div>
+
+                <canvas id="categoryChart"></canvas>
+
+            </div>
+
+            <div
+                class="panel"
+                id="insights">
+
+                <div class="panel-header">
+
+                    <h2>
+
+                        Business Insights
+
+                    </h2>
+
+                </div>
+
+                <div class="insight-card">
+
+                    <ul id="insightsList">
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+
+            <div>
+
+                <h3>
+
+                    E-Commerce Analytics Dashboard
+
+                </h3>
+
+                <p>
+
+                    Built with FastAPI • Pandas • NumPy • SQLite • Chart.js
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+
+                    
+
+                </p>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
