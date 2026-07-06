@@ -1,127 +1,72 @@
-# 🛒 E-Commerce Order Cancellation Analytics Dashboard
+# 📊 E-Commerce Cancellation Analysis Dashboard
 
-A web-based analytics dashboard built using **FastAPI**, **Pandas**, and **Chart.js** to analyze over **99,000+ e-commerce orders** and visualize cancellation trends, revenue, payment methods, and business insights.
+A data analytics dashboard built using **FastAPI, Pandas, SQLite, and Chart.js** to analyze e-commerce order data and visualize business insights like cancellations, payments, and sales trends.
 
 ---
 
 ## 🚀 Features
 
-- 📊 Interactive analytics dashboard
-- 📦 Order status distribution
-- 📈 Monthly orders visualization
-- 💰 Monthly revenue analysis
-- 💳 Payment methods analysis
-- 🏷️ Top product categories
-- 💡 Business insights generation
-- 🗄️ SQLite database integration
-- ⚡ REST API using FastAPI
+- 📦 Total orders and cancellation tracking
+- 📉 Order status distribution (Pie chart)
+- 💳 Payment method analysis (Bar chart)
+- 📈 Monthly order trends (Line chart)
+- 📊 Top product categories analysis
+- 💡 Business insights dashboard
+- 🎨 Interactive UI using Chart.js
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 - Python
 - FastAPI
 - Pandas
-- NumPy
 - SQLite
-- HTML
-- CSS
-- JavaScript
+- HTML, CSS, JavaScript
 - Chart.js
 
 ---
 
-## 📁 Project Structure
+## 📁 Dataset
 
-```text
-ecommerce-dashboard/
-│
-├── data/
-├── static/
-├── templates/
-├── analysis.py
-├── app.py
-├── database.py
-├── ecommerce.db
-├── requirements.txt
-└── README.md
-```
+This project uses the **Olist Brazilian E-Commerce dataset** containing:
+- Orders
+- Payments
+- Products
+- Customers
+- Sellers
 
 ---
 
 ## 📸 Dashboard Preview
 
-### Dashboard
+### Main Dashboard
+![Dashboard 1](screenshots/dashboard1.png)
 
-![Dashboard](screenshots/dashboard.png)
-
-### Analytics Charts
-
-![Charts](screenshots/charts.png)
-
-### Business Insights
-
-![Insights](screenshots/insights.png)
+### Analytics View
+![Dashboard 2](screenshots/dashboard2.png)
 
 ---
 
-## ⚙️ Installation
+## 📂 Project Structure
 
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/ecommerce-dashboard.git
-```
-
-Go into the project:
-
-```bash
-cd ecommerce-dashboard
-```
-
-Create a virtual environment:
-
-```bash
-python -m venv venv
-```
-
-Activate it:
-
-Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
-uvicorn app:app --reload
-```
-
-Open:
-
-```
-http://127.0.0.1:8000
-```
-
----
-
-## 📈 Dataset
-
-This project uses the **Brazilian E-Commerce Public Dataset by Olist** available on Kaggle.
-
----
-
-## 👨‍💻 Author
-
-**Laasya Sri**
-
-Engineering Student | Python | Data Analytics | FastAPI
+```text id="structure"
+ecommerce-dashboard/
+│
+├── app.py
+├── analysis.py
+├── database.py
+├── requirements.txt
+│
+├── data/
+│
+├── screenshots/
+│   ├── dashboard1.png
+│   └── dashboard2.png
+│
+├── static/
+│   ├── script.js
+│   └── style.css
+│
+├── templates/
+│   └── index.html
